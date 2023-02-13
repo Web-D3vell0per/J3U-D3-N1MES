@@ -1,3 +1,4 @@
+from random import randint
 joueur1_baton = 0
 joueur2_baton = 0
 
@@ -5,6 +6,44 @@ nombre_max_baton = 21
 
 nom_joueur_1=input("Quel est le nom du joueur 1?")
 nom_joueur_2=input("Quel est le nom du joueur 2?")
+
+if nom_joueur_2=="bot":
+  while nombre_max_baton > 0:
+    joueur1_baton = input("nombre de baton que vous voulez retirer:")
+    joueur1_baton = int(joueur1_baton)
+
+    while joueur1_baton > 3:
+    # SA veut que le nombre de baton du jouer 1 est supérieur à 3
+      joueur1_baton = int(input("choisir un nombre inférieur ou égal à 3: "))
+
+
+    nombre_max_baton = nombre_max_baton - joueur1_baton
+    if nombre_max_baton <= 0:
+      print(nom_joueur_1,"à gagné !!!!!")
+      break
+    
+    print("il reste {} baton".format(nombre_max_baton))
+    
+    BOT_baton = randint(1, 4)
+    BOT_baton = int(BOT_baton)
+
+    nombre_max_baton = nombre_max_baton - BOT_baton
+    if nombre_max_baton <= 0:
+      print("BOT à gagné !!!!!")
+      break
+    print("BOT a pris {} baton".format(BOT_baton))
+    print("il reste {} baton".format(nombre_max_baton))
+
+
+
+
+
+
+
+
+
+
+
 
 while nombre_max_baton > 0:
   joueur1_baton = input("nombre de baton que vous voulez retirer:")
