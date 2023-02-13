@@ -9,7 +9,7 @@ if nom_joueur_2== "bot":
   joueur1_baton = input("nombre de baton que vous voulez retirer:")
   joueur1_baton = int(joueur1_baton)
 while nombre_max_baton > 0:
-    joueur1_baton = (nom_joueur_1,"nombre de baton que vous voulez retirer:")
+    joueur1_baton = input("nombre de baton que vous voulez retirer:")
     joueur1_baton = int(joueur1_baton)
 
 while joueur1_baton > 3:
@@ -23,7 +23,7 @@ while joueur1_baton > 3:
  
 print("il reste {} baton".format(nombre_max_baton))
 
-joueur2_baton = input(nom_joueur_2,"nombre de baton que vous voulez retirer:")
+joueur2_baton = input("nombre de baton que vous voulez retirer:")
 joueur2_baton = int(joueur2_baton)
 while joueur2_baton > 3:
     joueur2_baton = int(input("choisir un nombre inférieur à 3: "))
